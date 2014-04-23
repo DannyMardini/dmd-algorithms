@@ -34,8 +34,7 @@ class Main
     public static void main(String[] args)
     {
         StringBuilder sb = new StringBuilder();
-        //int[] nums = {2, -8, 3, -2, 4, -10};
-        int[] nums = {2, 2, 3, -2, 4, -10};
+        int[] nums = {2, -8, 3, -2, 4, -10};
         ArrayList<Integer> arr = new ArrayList<Integer>();
         for(int i = 0; i < nums.length; i++) {
             arr.add(nums[i]);
