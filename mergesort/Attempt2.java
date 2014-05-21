@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Attempt2
 {
@@ -49,11 +50,29 @@ public class Attempt2
         }
     }
 
+    public static int[] toIntArray(ArrayList<Integer> a) {
+        int[] arr = new int[a.size()];
+
+        for(int i = 0; i < a.size(); i++) {
+            arr[i] = a.get(i);
+        }
+
+        return arr;
+    }
+
     public static void main(String[] args)
     {
-        int[] a = {5, 3, 4, 6, 2, 10};
-        System.out.println("Before: " + Arrays.toString(a));
-        MergeSort(a);
-        System.out.println("After: " + Arrays.toString(a));
+        ArrayList<Integer> a = new ArrayList<Integer>();
+
+        for(String s : args)
+        {
+            a.add(Integer.parseInt(s));
+        }
+
+        int[] arr = toIntArray(a);
+            
+        System.out.println("Before: " + Arrays.toString(arr));
+        MergeSort(arr);
+        System.out.println("After: " + Arrays.toString(arr));
     }
 }
