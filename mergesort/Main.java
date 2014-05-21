@@ -3,7 +3,7 @@ import java.util.List;
 
 /*
  * Best Case: O(n log n)
- * Worse Cas: O(n log n)
+ * Worst Case: O(n log n)
  */
 
 class Main
