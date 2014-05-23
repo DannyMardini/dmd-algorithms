@@ -4,6 +4,9 @@ import java.util.ListIterator;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Stack;
+import java.util.TreeMap;
+import java.util.Queue;
+import java.util.PriorityQueue;
 
 public class Main
 {
@@ -138,6 +141,29 @@ public class Main
 
     public static void practiceBinarytree()
     {
+        TreeMap<Integer, String> t = new TreeMap<Integer, String>();
+
+        t.put(new Integer(5), "a");
+        t.put(new Integer(3), "b");
+        t.put(new Integer(7), "c");
+
+        Iterator<Integer> i = t.keySet().iterator();
+
+        System.out.println("keys:");
+        while(i.hasNext())
+        {
+            System.out.println(i.next());
+        }
+
+        System.out.println("Contains a? " + String.valueOf(t.containsValue("a")));
+        System.out.println("Contains b? " + String.valueOf(t.containsValue("b")));
+
+        boolean contains = t.containsKey(new Integer(7));
+        System.out.println("Contains key 7? " + String.valueOf(contains));
+        if(contains == true) {
+            System.out.println("What is key 7? " + t.get(new Integer(7)));
+        }
+
     }
 
     public static void practiceStack()
@@ -157,6 +183,16 @@ public class Main
     
     public static void practiceQueue()
     {
+        System.out.println("Priority queue:");
+        Queue<Integer> q = new PriorityQueue<Integer>();
+        q.add(new Integer(3));
+        q.add(new Integer(2));
+        q.add(new Integer(1));
+
+        while(q.size() > 0)
+        {
+            System.out.println(q.remove());
+        }
     }
 
     public static void practiceArraylist()
@@ -165,11 +201,11 @@ public class Main
 
     public static void main(String[] args)
     {
-        practiceHashtable();
+        //practiceHashtable();
         //practiceLinkedlist();
         //practiceBinarytree();
         //practiceStack();
         practiceQueue();
-        practiceArraylist();
+        //practiceArraylist();
     }
 }
